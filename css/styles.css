@@ -3,7 +3,8 @@
   --color-secondary: #00b7eb;
   --color-accent: #ec3000;
   --color-headings: #000c66;
-  --color-body: #868b8e;
+  --color-body: #918ca4;
+  --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
 }
@@ -378,4 +379,54 @@ a {
 
 .media__image {
   margin: 1rem;
+}
+
+/* Quotes */
+
+.quote {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-body-darker);
+  line-height: 1.3;
+}
+
+.quote__text::before {
+  content: open-quote;
+}
+
+.quote__text::after {
+  content: close-quote;
+}
+
+.quote__author {
+  font-size: 3rem;
+  margin-bottom: 0;
+  font-style: normal;
+}
+
+.quote__company {
+  color: var(--color-headings);
+  font-size: 2rem;
+  opacity: 0.4;
+  font-style: normal;
+}
+
+.quote--line {
+  position: relative;
+  bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+
+  .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .quote__company {
+    font-size: 1.6rem;
+  }
 }
