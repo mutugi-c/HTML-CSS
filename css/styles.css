@@ -718,3 +718,29 @@ a {
   max-width: 500px;
   margin: 0 auto; /* Center the plans using horizontal margin */
 }
+
+/* Block features*/
+
+.feature {
+  gap: 4rem 2rem; /* 4for columns, 2 for rows*/
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    /*Select the 2nd, 4th... feature and reorder content*/
+    order: 2;
+  }
+}
