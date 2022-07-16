@@ -319,7 +319,8 @@ a {
   overflow: hidden;
 }
 
-.card__header .card__body {
+.card__header,
+.card__body {
   padding: 2rem 3rem;
 }
 
@@ -333,11 +334,19 @@ a {
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background-color: #126de4;
+}
+
 .card--secondary .badge--secondary {
   background-color: #02cdf1;
 }
 
 /* Plans */
+
+.plan {
+  transition: transform 0.2s ease-out;
+}
 
 .plan__name {
   color: #fff;
@@ -366,6 +375,10 @@ a {
 
 .plan .list__item {
   margin-bottom: 2rem;
+}
+
+.plan:hover {
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 1024px) {
@@ -693,4 +706,15 @@ a {
       minmax(100px, 1fr)
     ); /* Auto, in case an extra badge is added*/
   }
+}
+
+/* Block Plan */
+
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 500px;
+  margin: 0 auto; /* Center the plans using horizontal margin */
 }
