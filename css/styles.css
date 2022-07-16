@@ -214,7 +214,16 @@ a {
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
+  outline: none;
 }
+
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
 /* Skin of the button */
 .btn--primary {
   background-color: var(--color-primary);
@@ -289,7 +298,7 @@ a {
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2.5rem;
 }
 
 .input-group .btn {
@@ -654,5 +663,34 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/* Block Domain */
+
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block--domain__prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* repeat(3, 1fr) */
+  grid-template-rows: 6rem 6rem; /* Define grid row sizes*/
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto; /* To have items centered */
+}
+
+@media screen and (min-width: 768px) {
+  .block--domain__prices {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(100px, 1fr)
+    ); /* Auto, in case an extra badge is added*/
   }
 }
